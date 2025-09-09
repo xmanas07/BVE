@@ -2,7 +2,7 @@
 
 namespace BVE {
 
-	
+	// Application interface
 
 	Application::Application()
 	{

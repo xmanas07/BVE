@@ -1,5 +1,5 @@
 #include <BVE.h>
-
+// extends BVE::Application interface
 class Sandbox : public BVE::Application
 {
 public:
