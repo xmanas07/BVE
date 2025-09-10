@@ -4,6 +4,9 @@
     <Filter Include="BVE">
       <UniqueIdentifier>{02D7870B-6EE0-877C-F75B-9E7C6364937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BVE\Events">
+      <UniqueIdentifier>{A64C69DB-9204-AB28-FB0B-8484E7E24519}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BVE.h" />
@@ -16,9 +19,15 @@
     <ClInclude Include="src\BVE\EntryPoint.h">
       <Filter>BVE</Filter>
     </ClInclude>
+    <ClInclude Include="src\BVE\Events\Event.h">
+      <Filter>BVE\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\BVE\Log.h">
       <Filter>BVE</Filter>
     </ClInclude>
+    <ClInclude Include="src\BVE\Events\KeyEvent.h" />
+    <ClInclude Include="src\BVE\Events\MouseEvent.h" />
+    <ClInclude Include="src\BVE\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BVE\Application.cpp">

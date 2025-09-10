@@ -1,5 +1,11 @@
 #include "Application.h"
 
+#include "BVE/Events/ApplicationEvent.h"
+#include "BVE/Events/MouseEvent.h"
+#include "BVE/Log.h"
+
+#include <iostream>
+
 namespace BVE {
 
 	// Application interface
@@ -13,6 +19,12 @@ namespace BVE {
 
 	void Application::Run()
 	{
+		int a = 5;
+		
+		MouseMovedEvent e(10, 20);
+		if (e.IsInCategory(EventCategoryInput) && e.IsInCategory(EventCategoryMouse))
+			BVE_TRACE(e.ToString());
+		else BVE_TRACE("nn");
 		while (true)
 		{
 
