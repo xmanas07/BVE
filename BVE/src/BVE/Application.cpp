@@ -1,10 +1,10 @@
+#include "bvepch.h"
+
 #include "Application.h"
 
 #include "BVE/Events/ApplicationEvent.h"
 #include "BVE/Events/MouseEvent.h"
 #include "BVE/Log.h"
-
-#include <iostream>
 
 namespace BVE {
 

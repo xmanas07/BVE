@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace BVE
 {
 	class BVE_API KeyEvent : public Event

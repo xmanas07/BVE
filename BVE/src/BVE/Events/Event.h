@@ -1,9 +1,8 @@
 #pragma once
 
-#include "BVE/Core.h"
+#include "bvepch.h"
 
-#include <string>
-#include <functional>
+#include "BVE/Core.h"
 
 namespace BVE 
 {

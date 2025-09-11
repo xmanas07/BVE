@@ -23,6 +23,9 @@ workspace "BVE"
 		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+		pchheader "bvepch.h"
+		pchsource "BVE/src/bvepch.cpp"
+
 		files 
 		{
 			"%{prj.name}/src/**.h",

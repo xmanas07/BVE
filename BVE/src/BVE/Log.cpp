@@ -1,3 +1,5 @@
+#include "bvepch.h"
+
 #include "Log.h"
 
 namespace BVE {

@@ -19,15 +19,22 @@
     <ClInclude Include="src\BVE\EntryPoint.h">
       <Filter>BVE</Filter>
     </ClInclude>
+    <ClInclude Include="src\BVE\Events\ApplicationEvent.h">
+      <Filter>BVE\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\BVE\Events\Event.h">
+      <Filter>BVE\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BVE\Events\KeyEvent.h">
+      <Filter>BVE\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BVE\Events\MouseEvent.h">
       <Filter>BVE\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\BVE\Log.h">
       <Filter>BVE</Filter>
     </ClInclude>
-    <ClInclude Include="src\BVE\Events\KeyEvent.h" />
-    <ClInclude Include="src\BVE\Events\MouseEvent.h" />
-    <ClInclude Include="src\BVE\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\bvepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\BVE\Application.cpp">
@@ -36,5 +43,6 @@
     <ClCompile Include="src\BVE\Log.cpp">
       <Filter>BVE</Filter>
     </ClCompile>
+    <ClCompile Include="src\bvepch.cpp" />
   </ItemGroup>
 </Project>
