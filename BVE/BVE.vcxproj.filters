@@ -7,6 +7,12 @@
     <Filter Include="BVE\Events">
       <UniqueIdentifier>{A64C69DB-9204-AB28-FB0B-8484E7E24519}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BVE.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\BVE\Log.h">
       <Filter>BVE</Filter>
     </ClInclude>
+    <ClInclude Include="src\BVE\Window.h">
+      <Filter>BVE</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\bvepch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\BVE\Log.cpp">
       <Filter>BVE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\bvepch.cpp" />
   </ItemGroup>

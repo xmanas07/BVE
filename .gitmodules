@@ -1,3 +1,6 @@
 [submodule "BVE/vendor/spdlog"]
 	path = BVE/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "BVE/vendor/GLFW"]
+	path = BVE/vendor/GLFW
+	url = https://github.com/xmanas07/glfw

@@ -15,4 +15,12 @@
 	#error BVE only supports Windows!
 #endif
 
+#ifdef BVE_ENABLE_ASSERTS
+	#define BVE_ASSERT(x, ...) {if(!(x)) {BVE_ERROR("Assertion Failed: {0}",__VA_ARGS__); __debugbreak();}}
+	#define BVE_CORE_ASSERT(x, ...) {if(!(x)) {BVE_CORE_ERROR("Assertion Failed: {0}",__VA_ARGS__); __debugbreak();}}
+#else
+	#define BVE_ASSERT(x, ...)
+	#define BVE_CORE_ASSERT(x, ...)
+#endif
+
 #define BIT(x) (1 << x)

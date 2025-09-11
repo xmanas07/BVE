@@ -15,10 +15,17 @@ workspace "BVE"
 		buildoptions {"/utf-8"}
 	filter {}
 
+	-- Include directories relative to root folder (solution directory)
+	IncludeDir = {}
+	IncludeDir["GLFW"] = "BVE/vendor/GLFW/include"
+
+	include "BVE/vendor/GLFW"
+
 	project "BVE"
 		location "BVE"
 		kind "SharedLib"
 		language "C++"
+		staticruntime "on"
 
 		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -36,7 +43,16 @@ workspace "BVE"
 		{
 			
 			"%{prj.name}/src",
-			"%{prj.name}/vendor/spdlog/include"
+			"%{prj.name}/vendor/spdlog/include",
+			"%{IncludeDir.GLFW}"
+		}
+
+		links
+		{
+			"GLFW",
+			"opengl32.lib",
+			"dwmapi.lib"
+
 		}
 
 		filter "system:windows"
@@ -56,7 +72,7 @@ workspace "BVE"
 			}
 
 		filter "configurations:Debug"
-			defines "BVE_DEBUG"
+			defines {"BVE_DEBUG", "BVE_ENABLE_ASSERTS"}
 			symbols "On"
 	
 		filter "configurations:Release"
@@ -71,6 +87,7 @@ workspace "BVE"
 		location "Sandbox"
 		kind "ConsoleApp"
 		language "C++"
+		staticruntime "on"
 
 		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
