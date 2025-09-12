@@ -1,17 +1,13 @@
 #include "bvepch.h"
 
 #include "Application.h"
-
-#include "BVE/Events/ApplicationEvent.h"
-#include "BVE/Events/MouseEvent.h"
-#include "BVE/Log.h"
-
 namespace BVE {
 
 	// Application interface
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 	Application::~Application()
 	{
@@ -19,15 +15,9 @@ namespace BVE {
 
 	void Application::Run()
 	{
-		int a = 5;
-		
-		MouseMovedEvent e(10, 20);
-		if (e.IsInCategory(EventCategoryInput) && e.IsInCategory(EventCategoryMouse))
-			BVE_TRACE(e.ToString());
-		else BVE_TRACE("nn");
-		while (true)
+		while (m_Running)
 		{
-
+			m_Window->OnUpdate();
 		}
 	}
 
