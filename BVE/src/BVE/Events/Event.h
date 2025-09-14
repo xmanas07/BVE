@@ -66,15 +66,18 @@ namespace BVE
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
 				m_Event.m_handeled = func(*(T*)&m_Event);
+				return true;
 			}
+			return false;
 		}
 	private:
 		Event& m_Event;
 	};
 
-	inline std::ostream& operator<<(std::ostream& os, Event& e)
-	{
-		return os << e.ToString();
+	
+	inline std::string format_as(const Event& e) {
+		return e.ToString();
 	}
+
 
 }
